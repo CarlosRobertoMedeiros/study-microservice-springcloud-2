@@ -1,6 +1,10 @@
 server:
-  port: 8100
+  port: 8101
 
 spring:
   application:
     name: hr-payroll
+
+#Projeto Dependente
+hr-worker:
+  host: http://localhost:8001
