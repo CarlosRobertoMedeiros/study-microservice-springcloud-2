@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import br.com.roberto.hrpayroll.response.Worker;
 
 @Component
-@FeignClient(name="hr-worker" , url="localhost:8001", path = "/workers")
+@FeignClient(name="HR-WORKER" , path = "/workers")
 public interface WorkerFeignClient {
 	
 	@GetMapping
