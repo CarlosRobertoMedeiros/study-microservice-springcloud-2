@@ -11,4 +11,9 @@ spring:
         git:
           default-label: main
           uri: https://github.com/CarlosRobertoMedeiros/study-microservice-springcloud-2-config-server
+          #username: ${GITHUB_USER}
+          #password: ${GITHUB_PASS}
+#não coloquei o github privativo
+#para fazer não esqueça de criar as variáveis
+#de ambiente em seguida é necessário reiniciar a ide
 
