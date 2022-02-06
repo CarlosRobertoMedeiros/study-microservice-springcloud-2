@@ -25,3 +25,9 @@ spring:
         uri: lb://hr-payroll
         predicates:
         - Path=/hr-payroll/**
+      - id: hr-user
+        uri: lb://hr-user
+        predicates:
+        - Path=/hr-user/**
+
+

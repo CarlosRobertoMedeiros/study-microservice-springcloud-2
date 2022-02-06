@@ -15,3 +15,4 @@ Criação do CircuitBreaker
 Criação dos Microserviços
   - hr-worker
   - hr-payroll
+  - hr-user(Authorization Server)
