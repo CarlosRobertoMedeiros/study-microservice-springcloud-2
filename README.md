@@ -1,5 +1,8 @@
 # study-microservice-springcloud-2
 
+Criação do Config-Server
+  - hr-config-server with github
+
 Criação do Naming Server
   - hr-naming-server-eureka
 
