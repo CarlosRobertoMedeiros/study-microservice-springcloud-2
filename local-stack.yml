@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+
+  #link: localhost:8180/auth
+  keycloak_microservices:
+    container_name: keycloak_microservices
+    image: jboss/keycloak:16.0.0
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+    ports:
+      - 8180:8080
+    networks:
+      - microservices-network 
+        
+networks:
+  microservices-network:
+    driver: bridge
+      
+      
+      
+
+  
+  
+  
