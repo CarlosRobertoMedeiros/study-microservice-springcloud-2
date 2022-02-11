@@ -1,19 +1,38 @@
-# study-microservice-springcloud-2
+# Study-Microservice-SpringCloud-2
 
-Criação do Config-Server
-  - hr-config-server with github
+# Environment
+  - Execute the Stack Using 
+    - docker-compose -f local-stack.yml -up
 
-Criação do Naming Server
-  - hr-naming-server-eureka
+  KeyCloak
+	- In case of problems with the login
+	
+	::::::SEE WITH ATTENTION:::::::
+	Open other terminal and make the follow codes:
+		1 - create the user and the password admin 
+		docker exec -it keycloak_microservices /opt/jboss/keycloak/bin/add-user-keycloak.sh -u admin -p admin
+		
+		2 - make a reload in the jboss-cli
+		docker exec -it keycloak_microservices /opt/jboss/keycloak/bin/jboss-cli.sh --connect --command=:reload
+	
+	- Import the "realm-export.json" inside the KeyCloak
 
-Criação do Gateway
-  - hr-api-gateway  
+# MicroServices
+
+	Created Config-Server
+		- hr-config-server with github
+
+	Created Naming Server
+		- hr-naming-server-eureka
+
+	Created Gateway
+	  - hr-api-gateway  
   
-Criação do CircuitBreaker
-  - hr-payroll with Resilience4j
+	Applying a CircuitBreaker
+		- hr-payroll with Resilience4j
 
-Criação dos Microserviços
-  - hr-worker
-  - hr-payroll
-  - hr-user
-  - hr-oauth(Authorization Server)
+	Microservices
+	- hr-worker
+	- hr-payroll
+	- hr-user
+
