@@ -1,0 +1,652 @@
+{
+	"info": {
+		"_postman_id": "bf7e5ec0-4dbe-4f46-a2b8-342370f6e3a6",
+		"name": "UdemyMicroservice-2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hr-worker",
+			"item": [
+				{
+					"name": "getAllWorkers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/workers",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"workers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getWorkerById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/workers/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"workers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hr-users",
+			"item": [
+				{
+					"name": "getUsersById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8201/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8201",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsersByEmail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8201/users/search?email=leia@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8201",
+							"path": [
+								"users",
+								"search"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "leia@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hr-payroll",
+			"item": [
+				{
+					"name": "getPayment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8101/payments/2/days/20",
+							"host": [
+								"localhost"
+							],
+							"port": "8101",
+							"path": [
+								"payments",
+								"2",
+								"days",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hr-gateway",
+			"item": [
+				{
+					"name": "getAllWorkersByGateway",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4LW9kZVBYck9RaDRfeVlpM24tdXliMWMzUElpRVNBWFNaVVZrcWhaQjRnIn0.eyJleHAiOjE2NDQ5ODM3MTUsImlhdCI6MTY0NDk4MzQxNSwianRpIjoiNDgyYWIyM2UtZWVlOC00ODA0LTg0MjctZDNhYWU0MGQ3ODg4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgwL2F1dGgvcmVhbG1zL21pY3Jvc2VydmljZXMtcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNDY3MDUwM2UtZGMzZi00ZjZhLTk0MjEtMzkyYzFmYWVhY2RlIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiaHItYXBpLWdhdGV3YXkiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1taWNyb3NlcnZpY2VzLXJlYWxtIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6ImhyLWFwaS1nYXRld2F5IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE4LjAuMSIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1oci1hcGktZ2F0ZXdheSIsImNsaWVudEFkZHJlc3MiOiIxNzIuMTguMC4xIn0.hokkcRANQ-Q21Eexhpv5UNlu7umfUyy6wF-0KtFNt3LPppHA895BmPHFqt9NcfhTCeYHS7mNWxpTMecjWQmMf9KVHuFc5bQIGV5-tsrQ1z5T6as2284A99Bg3OIqjJ33h9yITk7WW9Zm0uW4LH-vKXm7b6U11uYaJehhv3FQLw0yq1afZ9O28EdLY_3Fr_dQLhERE35FMiwilcRrCC28GUZYEUUi4JebNoKuhWjAjrxvf8vETfgToAt0P-scWI9F9eoD31Ye4s8JkTR8J4K2K-RC3zt33VLYlR5ppAyzutJahTenR4ECQN6ZhwX2L3H5P290DGXH6XEWf-1g22FNMA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8765/hr-worker/workers/",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"hr-worker",
+								"workers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getWorkerByIdByGateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8765/hr-worker/workers/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"hr-worker",
+								"workers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPaymentByGateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8765/hr-payroll/payments/2/days/20",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"hr-payroll",
+								"payments",
+								"2",
+								"days",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getConfigConsoleByConfigServerWithGateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8765/hr-worker/workers/configs",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"hr-worker",
+								"workers",
+								"configs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actuatorRefreshInRuntime",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8765/hr-worker/actuator/refresh",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"hr-worker",
+								"actuator",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsersByIdByGateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8765/hr-user/users/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"hr-user",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsersByEmailByGateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8765/hr-user/users/search?email=nina@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"hr-user",
+								"users",
+								"search"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nina@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userByEmailOauthByGateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8765/hr-oauth/users/search?email=leia@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"hr-oauth",
+								"users",
+								"search"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "leia@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hr-config-server",
+			"item": [
+				{
+					"name": "Default Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/hr-worker/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"hr-worker",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/hr-worker/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"hr-worker",
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hr-oauth",
+			"item": [
+				{
+					"name": "userByEmail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8301/users/search?email=leia@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8301",
+							"path": [
+								"users",
+								"search"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "leia@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hr-security",
+			"item": [
+				{
+					"name": "retornarSeguranca",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4ZjIzOTlkNS0xYWZiLTQ0YTQtOGJkZS1iNDFkOWNkYjc4ZWYifQ.eyJleHAiOjE2NDQzNzc3MTMsImlhdCI6MTY0NDM3NTkxMywianRpIjoiMjM2YmJlYWUtNDc0MC00MTk2LWFlMDMtMzRmNDg0ZDE5ZWQ2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgwL2F1dGgvcmVhbG1zL2Jhbmstc3lzdGVtIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgwL2F1dGgvcmVhbG1zL2Jhbmstc3lzdGVtIiwic3ViIjoiMTJmYThmZGYtZDJkNS00NjIyLTg5YTctOWE3YWRiNDc1NGE0IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6ImZyb250LXdlYi1jYWRhc3RybyIsInNlc3Npb25fc3RhdGUiOiI3Y2RiNDRjNC05NWY1LTRmYWUtYmZiOC02YjdmMWVhNTU0NWUiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiI3Y2RiNDRjNC05NWY1LTRmYWUtYmZiOC02YjdmMWVhNTU0NWUifQ.scW_qpjOXfXnu5KOwO7Eu3BHrfqAe43wA-xdWkNiNyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8090/security/",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"security",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "keyClockPubKey",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8180/auth/realms/AppBlog-PasswordFlow/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"auth",
+								"realms",
+								"AppBlog-PasswordFlow",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "keyClockRetriveCerts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0N3dad0Y1TjVxZGZaczkzNmtrRHVXc0ptMGRIV25qc0pfclktT25CbGtNIn0.eyJleHAiOjE2NDQzNzQ3MTEsImlhdCI6MTY0NDM3NDQxMSwianRpIjoiOGNiY2M4ZTMtZDgyOS00ODU1LTlmNmYtOTc5ZTcxYTI0NDY0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgwL2F1dGgvcmVhbG1zL2Jhbmstc3lzdGVtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjEyZmE4ZmRmLWQyZDUtNDYyMi04OWE3LTlhN2FkYjQ3NTRhNCIsInR5cCI6IkJlYXJlciIsImF6cCI6ImZyb250LXdlYi1jYWRhc3RybyIsInNlc3Npb25fc3RhdGUiOiJkZDQ1Mjk4Ny03MDFiLTQ2M2MtYmRiOS04MzQwODBlMmQ3MTUiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtYmFuay1zeXN0ZW0iLCJwcm9wcmlldGFyaW8iLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiZGQ0NTI5ODctNzAxYi00NjNjLWJkYjktODM0MDgwZTJkNzE1IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImdyb3VwcyI6WyJkZWZhdWx0LXJvbGVzLWJhbmstc3lzdGVtIiwicHJvcHJpZXRhcmlvIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJwcm9wcmlldGFyaW8xIiwiZ2l2ZW5fbmFtZSI6IiIsImZhbWlseV9uYW1lIjoiIiwiZW1haWwiOiJudW1zZWlAZXNxdWVjaS5jb20ifQ.KYPcQL6dMGpFT8nhPEk27mRvPqvl8a9neEYbAdzw90lkdINSYoPiG2fWyQij6FKltx-PFYIJm8UR3-AgId_Gk-Ncxug4IMKGFKUjBiC4pYH4fDV0u5JtP3wpdSfPvkY2aWO-FoLJejHXeC1reawj9QYWzHrqPIZhhSx-AXP7zlhjlhPMw9FIx0U953m4m3WWON4BpiduJSPaDGJXzdWdQ-netMxbV8gIiegbhhl1etJOFTm_8tPOnPANytMNk-QnClCM5k5TeF2nizpihE_NIQYh-KJykGk7TkMgX25mWFdsqEa-0UwmtsvoaXSgX3sbBdCsUCiRD7PxtNiqeyt65w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8180/auth/realms/bank-system/protocol/openid-connect/certs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"auth",
+								"realms",
+								"bank-system",
+								"protocol",
+								"openid-connect",
+								"certs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "front-web-cadastro",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "proprietario1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "senha123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8180/auth/realms/bank-system/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"auth",
+								"realms",
+								"bank-system",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "keycloak",
+			"item": [
+				{
+					"name": "capturaTokenPasswordFlow",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "microservice-a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "proprietario",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "senha123",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8180/auth/realms/AppBlog-PasswordFlow/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"auth",
+								"realms",
+								"AppBlog-PasswordFlow",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "capturaTokenClientCredentials",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "hr-api-gateway",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "c8bUNiLVdm98eBhJu3diXqnBsjcqPi4T",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8180/auth/realms/microservices-realm/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"auth",
+								"realms",
+								"microservices-realm",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
