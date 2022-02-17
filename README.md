@@ -14,8 +14,7 @@
 		
 		2 - make a reload in the jboss-cli
 		docker exec -it keycloak_microservices /opt/jboss/keycloak/bin/jboss-cli.sh --connect --command=:reload
-	
-	- Import the "realm-export.json" inside the KeyCloak
+	- Import the "realm-export.json" into KeyCloak realm menu
 
 # MicroServices
 
